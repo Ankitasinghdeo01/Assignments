@@ -1,0 +1,102 @@
+Assigment 1:
+root@kmaster:~# git version
+git version 2.17.1
+root@kmaster:~# clear
+
+root@kmaster:~# cd /home/edureka/Desktop/Handson/sample-project
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git init
+Initialized empty Git repository in /home/edureka/Desktop/Handson/sample-project/.git/
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git config --global user.name Ankitasinghdeo01
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git config --global user.email Ankitasinghdeo01@gmail.com
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	css/
+	fonts/
+	img/
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git add .
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   css/site.css
+	new file:   fonts/segoeuil.ttf
+	new file:   img/cloneWhite.svg
+	new file:   img/deployWhite.svg
+	new file:   img/lightbulbWhite.svg
+	new file:   img/stackWhite.svg
+	new file:   img/successCloudNew.svg
+	new file:   img/tweetThis.svg
+	new file:   index.html
+
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git commit -a -m "First commit "
+[master (root-commit) 32946be] First commit
+ 9 files changed, 198 insertions(+)
+ create mode 100644 css/site.css
+ create mode 100644 fonts/segoeuil.ttf
+ create mode 100644 img/cloneWhite.svg
+ create mode 100644 img/deployWhite.svg
+ create mode 100644 img/lightbulbWhite.svg
+ create mode 100644 img/stackWhite.svg
+ create mode 100644 img/successCloudNew.svg
+ create mode 100644 img/tweetThis.svg
+ create mode 100644 index.html
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git checkout -b feature-branch-name
+Switched to a new branch 'feature-branch-name'
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# 
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git checkout -b  Aperture
+Switched to a new branch 'Aperture'
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git add .
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git commit -m "Feature branch created and added"
+On branch Aperture
+nothing to commit, working tree clean
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git checkout master
+Switched to branch 'master'
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git merge Aperture
+Already up to date.
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git remote add origin master
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git remote -v
+origin	master (fetch)
+origin	master (push)
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git push -u origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git remote add origin https://github.com/Ankitasinghdeo01/Assignments.git
+fatal: remote origin already exists.
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git remote add origin1  https://github.com/Ankitasinghdeo01/Assignments.git
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git remote -v
+origin	master (fetch)
+origin	master (push)
+origin1	https://github.com/Ankitasinghdeo01/Assignments.git (fetch)
+origin1	https://github.com/Ankitasinghdeo01/Assignments.git (push)
+root@kmaster:/home/edureka/Desktop/Handson/sample-project# git push -u origin1 master
+Username for 'https://github.com': Ankitasinghdeo01
+Password for 'https://Ankitasinghdeo01@github.com': 
+Counting objects: 14, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (14/14), 460.43 KiB | 6.87 MiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0)
+To https://github.com/Ankitasinghdeo01/Assignments.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin1'.
+
+
